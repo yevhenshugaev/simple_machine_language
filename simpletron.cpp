@@ -37,7 +37,7 @@ int simpletron::getwrd(string str)
 
 	// init variables 
 	char ltr[] = "+-0123456789"; // ltr allow
-	int wrd_l = 0, wrd_l2 = 0;	 // wrd length
+	int wrd_l = 0, wrd_l2 = 0;   // wrd length
 	int wrd_s = -1, wrd_e = -1;  // wrd post 
 
 	// FIND THE WRD AND CHECK LENGTH 
@@ -51,14 +51,14 @@ int simpletron::getwrd(string str)
 		else if (wrd_l2 == wrd_l) wrd_l = 0; } // if wrd is to short 
 
 	// if the correct wrd - is not found
-	if (wrd_s == -1 && wrd_e == -1) return -1;						 // error_wrd
+	if (wrd_s == -1 && wrd_e == -1) return -1;							 // error_wrd
 
 	// CHECK THE WRD SYMBOLS 
 	int wrd = 0; // new wrd
 	for (; wrd_s <= wrd_e; wrd_s++) { // space of wrd
 		if (48 <= str[wrd_s] && str[wrd_s] <= 57) { // check ltr
 			wrd  = (wrd * 10) + str[wrd_s] - '0';   // build wrd 
-		} else return -1; }											 // error_wrd 
+		} else return -1; }									 // error_wrd 
 
 	// CHECK THE WRD COMMANDS
 	int Tsz = 21; cmd = wrd / 1000; bool Tst = false; // <- !!! update Tsz count !!!

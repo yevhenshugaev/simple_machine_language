@@ -70,7 +70,7 @@ int simpletron::getwrd(string str)
 	if (Tst == false) return cmd;									 // error_cmd 
 
 	// PREPARATION OF THE WORD
-	if (str[wrd_e - 5] == '-') return  wrd * -1; else return wrd;	 // good_wrd!!!
+	return abs(wrd);										 // good_wrd!!!
 }
 
 void simpletron::prog_file(string name)
